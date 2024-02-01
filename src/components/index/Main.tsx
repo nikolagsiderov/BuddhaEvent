@@ -190,10 +190,10 @@ export default function Hero() {
             visible: { opacity: 1, y: 0, scale: 1 },
             hidden: { opacity: 0, y: 0, scale: 0.2 },
           }}
-          className="flex items-center justify-center inset-x-0 bottom-5 fixed"
+          className="flex items-center justify-center inset-x-0 bottom-5 fixed lg:relative"
         >
-          <span className="text-3xl lg:text-6xl lg:tracking-widest leading-tight font-black">
-            <span className="text-white lg:text-white/70">
+          <span className="text-3xl lg:text-9xl lg:tracking-widest leading-tight font-black">
+            <span className="text-white lg:text-white/80">
               <TypeAnimation
                 sequence={[
                   "COMING SOON",
