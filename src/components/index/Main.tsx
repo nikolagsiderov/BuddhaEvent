@@ -52,7 +52,7 @@ export default function Hero() {
       return () => clearInterval(timeInterval); // Clear interval on component unmount
     };
 
-    const timer = countdownTimer();
+    const timer: any = countdownTimer();
     return () => clearInterval(timer); // Ensure this is returned to clear the interval when the component unmounts or the expiryTime changes
   }, [expiryTime]);
 
