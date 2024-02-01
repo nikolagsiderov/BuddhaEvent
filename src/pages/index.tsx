@@ -1,4 +1,4 @@
-import Hero from "../components/left/Hero";
+import Main from "../components/index/Main";
 import type { NextPage } from "next";
 import Head from "next/head";
 
@@ -14,7 +14,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="w-full h-full relative p-6 lg:p-16">
-        <Hero />
+        <Main />
       </div>
     </div>
   );
