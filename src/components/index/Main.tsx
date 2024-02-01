@@ -181,9 +181,7 @@ export default function Hero() {
             </Card>
           </motion.div>
         </div>
-        <br />
-        <br />
-        <br />
+        <div className="flex items-center justify-center">nestho</div>
         <motion.div
           initial="hidden"
           animate="visible"
@@ -193,10 +191,10 @@ export default function Hero() {
             visible: { opacity: 1, y: 0, scale: 1 },
             hidden: { opacity: 0, y: 0, scale: 0.2 },
           }}
-          className="flex items-center justify-center"
+          className="flex items-center justify-center inset-x-0 bottom-5 fixed"
         >
-          <span className="text-3xl lg:text-9xl leading-tight font-black">
-            <span className="text-white">
+          <span className="text-3xl lg:text-6xl lg:tracking-widest leading-tight font-black">
+            <span className="text-white lg:text-white/70">
               <TypeAnimation
                 sequence={[
                   "COMING SOON",
