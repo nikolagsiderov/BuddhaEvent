@@ -102,28 +102,6 @@ export default function Hero() {
             PULSE
           </span>
         </h1>
-        <div className="flex items-center justify-center">
-          <h1 className="text-3xl lg:text-9xl lg:leading-tight font-black">
-            <span className="bg-gradient-to-r from-white/40 to-moon/90 text-transparent bg-clip-text">
-              <TypeAnimation
-                sequence={[
-                  "COMING SOON",
-                  1000,
-                  "16 - 19 MARCH",
-                  1000,
-                  "96 HOURS",
-                  1000,
-                  "COMING SOON",
-                  1000,
-                ]}
-                wrapper="span"
-                speed={60}
-                style={{ display: "inline-block" }}
-                repeat={Infinity}
-              />
-            </span>
-          </h1>
-        </div>
         <div className="lg:flex items-center justify-center my-8 lg:pb-24">
           <motion.div
             initial="hidden"
@@ -203,6 +181,38 @@ export default function Hero() {
             </Card>
           </motion.div>
         </div>
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 0.2, delay: 3 }}
+          viewport={{ once: true }}
+          variants={{
+            visible: { opacity: 1, y: 0, scale: 1 },
+            hidden: { opacity: 0, y: 0, scale: 0.2 },
+          }}
+          className="lg:flex items-center justify-center"
+        >
+          <h1 className="text-3xl lg:text-9xl lg:leading-tight font-black">
+            <span className="bg-gradient-to-r from-white/40 to-moon/90 text-transparent bg-clip-text">
+              <TypeAnimation
+                sequence={[
+                  "COMING SOON",
+                  1000,
+                  "16 - 19 MARCH",
+                  1000,
+                  "96 HOURS",
+                  1000,
+                  "COMING SOON",
+                  1000,
+                ]}
+                wrapper="span"
+                speed={60}
+                style={{ display: "inline-block" }}
+                repeat={Infinity}
+              />
+            </span>
+          </h1>
+        </motion.div>
       </div>
     </div>
   );
