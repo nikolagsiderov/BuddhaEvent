@@ -1,4 +1,3 @@
-import Waves from "../components/effects/Waves";
 import Hero from "../components/left/Hero";
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -14,7 +13,6 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Waves />
       <div className="w-full h-full relative p-6 lg:p-16">
         <Hero />
       </div>
