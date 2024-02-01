@@ -181,17 +181,7 @@ export default function Hero() {
             </Card>
           </motion.div>
         </div>
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.2, delay: 3 }}
-          viewport={{ once: true }}
-          variants={{
-            visible: { opacity: 1, y: 0, scale: 1 },
-            hidden: { opacity: 0, y: 0, scale: 0.5 },
-          }}
-          className="flex items-center justify-center"
-        >
+        <div className="flex items-center justify-center">
           <h1 className="text-3xl lg:text-9xl lg:leading-tight font-black">
             <span className="bg-gradient-to-r from-white/40 to-moon/90 text-transparent bg-clip-text">
               <TypeAnimation
@@ -212,7 +202,7 @@ export default function Hero() {
               />
             </span>
           </h1>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
