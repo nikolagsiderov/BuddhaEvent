@@ -181,7 +181,6 @@ export default function Hero() {
             </Card>
           </motion.div>
         </div>
-        <div className="flex items-center justify-center">nestho</div>
         <motion.div
           initial="hidden"
           animate="visible"
