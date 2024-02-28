@@ -57,163 +57,168 @@ export default function Hero() {
   }, [expiryTime]);
 
   return (
-    <div>
-      <div className="top-[7rem]">
-        <h1 className="text-3xl lg:text-3xl leading-tight lg:leading-tight font-black">
-          <motion.span
-            initial="hidden"
-            whileInView="visible"
-            transition={{ duration: 0.1, delay: 1.2 }}
-            viewport={{ once: true }}
-            variants={{
-              visible: { opacity: 1, y: 0, scale: 1 },
-              hidden: { opacity: 0, y: 0, scale: 0.9 },
-            }}
-          >
-            SOFIA{" "}
-          </motion.span>
-          <motion.span
-            initial="hidden"
-            whileInView="visible"
-            transition={{ duration: 0.1, delay: 1.4 }}
-            viewport={{ once: true }}
-            variants={{
-              visible: { opacity: 1, y: 0, scale: 1 },
-              hidden: { opacity: 0, y: 0, scale: 0.9 },
-            }}
-          >
-            SOUND{" "}
-          </motion.span>
-          <motion.span
-            initial="hidden"
-            whileInView="visible"
-            transition={{ duration: 0.1, delay: 2 }}
-            viewport={{ once: true }}
-            variants={{
-              visible: { opacity: 1, y: 0, scale: 1 },
-              hidden: { opacity: 0, y: 0, scale: 0.9 },
-            }}
-            className="text-moon/50"
-          >
-            OF
-          </motion.span>
-          <br />
-          <span className="text-white text-5xl animate-[pulse_0.9s_ease-in-out_infinite] animate-ping">
-            PULSE
-          </span>
-        </h1>
-        <div className="lg:flex items-center justify-center lg:my-8 lg:pb-24">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            transition={{ duration: 0.1, delay: 2 }}
-            viewport={{ once: true }}
-            variants={{
-              visible: { opacity: 1, y: 0, scale: 1 },
-              hidden: { opacity: 0, y: 0, scale: 0.8 },
-            }}
-          >
-            <Card>
-              <span className="text-3xl text-white/90 font-extrabold">
-                {countdownTime.countdownDays}
-              </span>
-              <span className="text-xs text-white font-extrabold"> DAYS</span>
-            </Card>
-          </motion.div>
+    <>
+      <div>
+        <div className="top-[7rem]">
+          <h1 className="text-3xl lg:text-3xl leading-tight lg:leading-tight font-black">
+            <motion.span
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 0.1, delay: 1.2 }}
+              viewport={{ once: true }}
+              variants={{
+                visible: { opacity: 1, y: 0, scale: 1 },
+                hidden: { opacity: 0, y: 0, scale: 0.9 },
+              }}
+            >
+              SOFIA{" "}
+            </motion.span>
+            <motion.span
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 0.1, delay: 1.4 }}
+              viewport={{ once: true }}
+              variants={{
+                visible: { opacity: 1, y: 0, scale: 1 },
+                hidden: { opacity: 0, y: 0, scale: 0.9 },
+              }}
+            >
+              SOUND{" "}
+            </motion.span>
+            <motion.span
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 0.1, delay: 2 }}
+              viewport={{ once: true }}
+              variants={{
+                visible: { opacity: 1, y: 0, scale: 1 },
+                hidden: { opacity: 0, y: 0, scale: 0.9 },
+              }}
+              className="text-moon/50"
+            >
+              OF
+            </motion.span>
+            <br />
+            <span className="text-white text-5xl animate-[pulse_0.9s_ease-in-out_infinite] animate-ping">
+              PULSE
+            </span>
+          </h1>
+          <div className="lg:flex items-center justify-center lg:my-8 lg:pb-24">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 0.1, delay: 2 }}
+              viewport={{ once: true }}
+              variants={{
+                visible: { opacity: 1, y: 0, scale: 1 },
+                hidden: { opacity: 0, y: 0, scale: 0.8 },
+              }}
+            >
+              <Card>
+                <span className="text-3xl text-white/90 font-extrabold">
+                  {countdownTime.countdownDays}
+                </span>
+                <span className="text-xs text-white font-extrabold"> DAYS</span>
+              </Card>
+            </motion.div>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            transition={{ duration: 0.1, delay: 2.1 }}
-            viewport={{ once: true }}
-            variants={{
-              visible: { opacity: 1, y: 0, scale: 1 },
-              hidden: { opacity: 0, y: 0, scale: 0.8 },
-            }}
-          >
-            <Card>
-              <span className="text-3xl text-white/90 font-extrabold">
-                {countdownTime.countdownHours}
-              </span>
-              <span className="text-xs text-white font-extrabold"> HOURS</span>
-            </Card>
-          </motion.div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 0.1, delay: 2.1 }}
+              viewport={{ once: true }}
+              variants={{
+                visible: { opacity: 1, y: 0, scale: 1 },
+                hidden: { opacity: 0, y: 0, scale: 0.8 },
+              }}
+            >
+              <Card>
+                <span className="text-3xl text-white/90 font-extrabold">
+                  {countdownTime.countdownHours}
+                </span>
+                <span className="text-xs text-white font-extrabold">
+                  {" "}
+                  HOURS
+                </span>
+              </Card>
+            </motion.div>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            transition={{ duration: 0.1, delay: 2.2 }}
-            viewport={{ once: true }}
-            variants={{
-              visible: { opacity: 1, y: 0, scale: 1 },
-              hidden: { opacity: 0, y: 0, scale: 0.8 },
-            }}
-          >
-            <Card>
-              <span className="text-3xl text-white/90 font-extrabold">
-                {countdownTime.countdownMinutes}
-              </span>
-              <span className="text-xs text-white font-extrabold">
-                {" "}
-                MINUTES
-              </span>
-            </Card>
-          </motion.div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 0.1, delay: 2.2 }}
+              viewport={{ once: true }}
+              variants={{
+                visible: { opacity: 1, y: 0, scale: 1 },
+                hidden: { opacity: 0, y: 0, scale: 0.8 },
+              }}
+            >
+              <Card>
+                <span className="text-3xl text-white/90 font-extrabold">
+                  {countdownTime.countdownMinutes}
+                </span>
+                <span className="text-xs text-white font-extrabold">
+                  {" "}
+                  MINUTES
+                </span>
+              </Card>
+            </motion.div>
 
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 0.1, delay: 2.3 }}
+              viewport={{ once: true }}
+              variants={{
+                visible: { opacity: 1, y: 0, scale: 1 },
+                hidden: { opacity: 0, y: 0, scale: 0.8 },
+              }}
+            >
+              <Card>
+                <span className="text-3xl text-white/90 font-extrabold">
+                  {countdownTime.countdownSeconds}
+                </span>
+                <span className="text-xs text-white font-extrabold">
+                  {" "}
+                  SECONDS
+                </span>
+              </Card>
+            </motion.div>
+          </div>
           <motion.div
             initial="hidden"
-            whileInView="visible"
-            transition={{ duration: 0.1, delay: 2.3 }}
+            animate="visible"
+            transition={{ duration: 0.2, delay: 3 }}
             viewport={{ once: true }}
             variants={{
               visible: { opacity: 1, y: 0, scale: 1 },
-              hidden: { opacity: 0, y: 0, scale: 0.8 },
+              hidden: { opacity: 0, y: 0, scale: 0.2 },
             }}
+            className="flex items-center justify-center inset-x-0 bottom-5 fixed lg:relative"
           >
-            <Card>
-              <span className="text-3xl text-white/90 font-extrabold">
-                {countdownTime.countdownSeconds}
+            <span className="text-3xl lg:text-9xl lg:tracking-widest leading-tight font-black">
+              <span className="text-white lg:text-white/80">
+                <TypeAnimation
+                  sequence={[
+                    "COMING SOON",
+                    1000,
+                    "16 - 19 MARCH",
+                    1000,
+                    "96 HOURS",
+                    1000,
+                    "COMING SOON",
+                    1000,
+                  ]}
+                  wrapper="span"
+                  speed={60}
+                  style={{ display: "inline-block" }}
+                  repeat={Infinity}
+                />
               </span>
-              <span className="text-xs text-white font-extrabold">
-                {" "}
-                SECONDS
-              </span>
-            </Card>
+            </span>
           </motion.div>
         </div>
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.2, delay: 3 }}
-          viewport={{ once: true }}
-          variants={{
-            visible: { opacity: 1, y: 0, scale: 1 },
-            hidden: { opacity: 0, y: 0, scale: 0.2 },
-          }}
-          className="flex items-center justify-center inset-x-0 bottom-5 fixed lg:relative"
-        >
-          <span className="text-3xl lg:text-9xl lg:tracking-widest leading-tight font-black">
-            <span className="text-white lg:text-white/80">
-              <TypeAnimation
-                sequence={[
-                  "COMING SOON",
-                  1000,
-                  "16 - 19 MARCH",
-                  1000,
-                  "96 HOURS",
-                  1000,
-                  "COMING SOON",
-                  1000,
-                ]}
-                wrapper="span"
-                speed={60}
-                style={{ display: "inline-block" }}
-                repeat={Infinity}
-              />
-            </span>
-          </span>
-        </motion.div>
       </div>
-    </div>
+    </>
   );
 }
