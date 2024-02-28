@@ -111,10 +111,13 @@ const Hero: React.FC<HeroProps> = ({ scrollAction }) => {
           <br />
           <button
             onClick={scrollAction}
-            className="lg:bg-white/10 bg-white/20 hover:bg-white/20 lg:text-white/10 text-white/20 font-bold py-2 px-4 rounded-full inline-flex items-center"
+            className="lg:bg-white/20 bg-white/30 hover:bg-white/20 lg:text-white/40 text-white/60 font-bold py-2 px-4 rounded-full inline-flex items-center"
           >
-            <PiWarningDiamondFill size={24} className="lg:fill-white/20 fill-white/30" />
-            <span className="pl-2">DO NOT CLICK</span>
+            <PiWarningDiamondFill
+              size={24}
+              className="lg:fill-white/30 fill-white/40"
+            />
+            <span className="pl-2">Click to view the event program</span>
           </button>
           <div className="lg:flex items-center justify-center lg:my-8 lg:pb-24">
             <motion.div

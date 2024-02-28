@@ -53,22 +53,22 @@ const Home: NextPage = () => {
           <div className="flex flex-col gap-1">
             <span className="text-sm lg:text-xl lg:tracking-wide leading-tight font-semibold">
               <span className="text-white lg:text-white/80">
-                Main stage: Dance/EDM
+                Main Stage: Dance/EDM
               </span>
             </span>
             <span className="text-sm lg:text-xl lg:tracking-wide leading-tight font-semibold">
               <span className="text-white lg:text-white/80">
-                Side stage 1: Hip Hop/ R&B
+                Side Stage 1: Hip Hop/R&B
               </span>
             </span>
             <span className="text-sm lg:text-xl lg:tracking-wide leading-tight font-semibold">
               <span className="text-white lg:text-white/80">
-                Side stage 2: Rock/ Indie
+                Side Stage 2: Rock/Indie
               </span>
             </span>
             <span className="text-sm lg:text-xl lg:tracking-wide leading-tight font-semibold">
               <span className="text-white lg:text-white/80">
-                Side stage 3: Contemporary/ Alternative
+                Side Stage 3: Contemporary/Alternative
               </span>
             </span>
           </div>
@@ -143,20 +143,15 @@ const Home: NextPage = () => {
           </span>
           <span className="text-md lg:text-lg lg:tracking-wide leading-tight font-semibold">
             <span className="text-white lg:text-white/80">
-              Dive into the electric heart of the night with LATE NIGHT: CODE
-              RED, an immersive experience designed to captivate the senses and
-              elevate the spirit. Featuring a lineup of internationally
-              acclaimed DJs, live electronic acts, and avant-garde performances,
-              this night promises an unparalleled celebration of electronic
-              culture.
+              Embark on an extraordinary journey into the heart of Sofia Sound
+              of Pulse&apos;s most vibrant and controversial district with LATE
+              NIGHT: CODE <span className="text-red-800">RED</span>. The venue
+              will be transformed into a vibrant red oasis, with immersive
+              lighting and decor that sets the stage for an epic adventure.
+              Expect a night filled with surprise performances.
             </span>
           </span>
           <div className="flex flex-col gap-1">
-            <span className="text-sm lg:text-xl lg:tracking-wide leading-tight font-semibold">
-              <span className="text-white lg:text-white/80">
-                Main Stage: Electronic Pulse
-              </span>
-            </span>
             <span className="text-sm lg:text-xl lg:tracking-wide leading-tight font-semibold">
               <span className="text-white lg:text-white/80">
                 Interactive Art and Light Installations
@@ -173,6 +168,15 @@ const Home: NextPage = () => {
               </span>
             </span>
           </div>
+          <span className="text-md lg:text-lg lg:tracking-wide leading-tight font-semibold">
+            <span className="text-white lg:text-white/80">
+              Guests with VIP cards have granted access.{" "}
+              <span className="font-light">
+                Guests with Basic cards need to secure spot in advance for a
+                night that promises to be exhilarating.
+              </span>
+            </span>
+          </span>
         </motion.div>
         <motion.div
           className="flex flex-col items-start justify-start gap-4"
@@ -193,39 +197,25 @@ const Home: NextPage = () => {
           </span>
           <span className="text-md lg:text-lg lg:tracking-wide leading-tight font-semibold">
             <span className="text-white lg:text-white/80">
-              Embrace the exhilaration of the final day with Rush Hour: The
-              Grande Finale, a day dedicated to showcasing international music
-              acts, breathtaking performances, and a celebration of the
-              festivals spirit. This day promises an unforgettable end to an
-              extraordinary event.
+              Details will remain confidential until the morning of March 19th.
             </span>
           </span>
-          <div className="flex flex-col gap-1">
-            <span className="text-sm lg:text-xl lg:tracking-wide leading-tight font-semibold">
-              <span className="text-white lg:text-white/80">
-                Main Stage: Global Beats
-              </span>
-            </span>
-            <span className="text-sm lg:text-xl lg:tracking-wide leading-tight font-semibold">
-              <span className="text-white lg:text-white/80">
-                International Experiences
-              </span>
-            </span>
-            <span className="text-sm lg:text-xl lg:tracking-wide leading-tight font-semibold">
-              <span className="text-white lg:text-white/80">
-                The Grande Finale Show
-              </span>
-            </span>
-            <span className="text-sm lg:text-xl lg:tracking-wide leading-tight font-semibold">
-              <span className="text-white lg:text-white/80">After-Parties</span>
-            </span>
-          </div>
         </motion.div>
         <div className="mt-32">
-          <span className="text-xl lg:text-6xl lg:tracking-widest leading-tight font-black">
+          <span className="text-xl lg:text-2xl uppercase lg:tracking-widest leading-tight font-black">
             <span className="text-white lg:text-white/80">
               <span className="text-moon/50">
-                FURTHER INFORMATION ON EVENT DAYS WILL BE ANNOUNCED ON ARRIVAL
+                Please note that due to the exclusivity of the event, we are not
+                yet allowed to announce the names of our headliners. Stay tuned!
+              </span>
+            </span>
+          </span>
+        </div>
+        <div>
+          <span className="text-xl lg:text-2xl lg:tracking-widest leading-tight font-black">
+            <span className="text-white lg:text-white/80">
+              <span className="text-moon/50">
+                FURTHER INFORMATION ON EVENT DAYS WILL BE ANNOUNCED ON ARRIVAL.
               </span>
             </span>
           </span>
