@@ -2,8 +2,16 @@ import Main from "../components/index/Main";
 import type { NextPage } from "next";
 import Head from "next/head";
 import VideoPlayer from "../components/VideoPlayer";
+import { motion } from "framer-motion";
+import { useRef } from "react";
 
 const Home: NextPage = () => {
+  const ref = useRef<HTMLDivElement>(null);
+
+  const handleClick = () => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div id="homescreen" className="relative">
       <Head>
@@ -12,13 +20,24 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div id="bg-image" className="w-full h-full relative p-6 lg:p-16">
-        <Main />
+        <Main scrollAction={handleClick} />
       </div>
       <div
+        ref={ref}
         id="rest"
         className="w-full h-full relative p-6 lg:p-16 flex flex-col gap-16"
       >
-        <div className="flex flex-col items-start justify-start gap-4">
+        <motion.div
+          className="flex flex-col items-start justify-start gap-4"
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          variants={{
+            visible: { opacity: 1, y: 0, scale: 1 },
+            hidden: { opacity: 0.5, y: 300, scale: 0.5 },
+          }}
+        >
           <span className="text-xl lg:text-6xl lg:tracking-widest leading-tight font-black">
             <span className="text-white lg:text-white/80">
               <span className="text-moon/50">DAY 1: </span>SUNRISE FOREST FEST
@@ -53,8 +72,18 @@ const Home: NextPage = () => {
               </span>
             </span>
           </div>
-        </div>
-        <div className="flex flex-col items-start justify-start gap-4">
+        </motion.div>
+        <motion.div
+          className="flex flex-col items-start justify-start gap-4"
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          variants={{
+            visible: { opacity: 1, y: 0, scale: 1 },
+            hidden: { opacity: 0.5, y: 300, scale: 0.5 },
+          }}
+        >
           <span className="text-xl lg:text-6xl lg:tracking-widest leading-tight font-black">
             <span className="text-white lg:text-white/80">
               <span className="text-moon/50">DAY 2: </span>
@@ -93,8 +122,18 @@ const Home: NextPage = () => {
               </span>
             </span>
           </div>
-        </div>
-        <div className="flex flex-col items-start justify-start gap-4">
+        </motion.div>
+        <motion.div
+          className="flex flex-col items-start justify-start gap-4"
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          variants={{
+            visible: { opacity: 1, y: 0, scale: 1 },
+            hidden: { opacity: 0.5, y: 300, scale: 0.5 },
+          }}
+        >
           <span className="text-xl lg:text-6xl lg:tracking-widest leading-tight font-black">
             <span className="text-white lg:text-white/80">
               <span className="text-moon/50">DAY 3: </span>LATE NIGHT:{" "}
@@ -134,8 +173,18 @@ const Home: NextPage = () => {
               </span>
             </span>
           </div>
-        </div>
-        <div className="flex flex-col items-start justify-start gap-4">
+        </motion.div>
+        <motion.div
+          className="flex flex-col items-start justify-start gap-4"
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          variants={{
+            visible: { opacity: 1, y: 0, scale: 1 },
+            hidden: { opacity: 0.5, y: 300, scale: 0.5 },
+          }}
+        >
           <span className="text-xl lg:text-6xl lg:tracking-widest leading-tight font-black">
             <span className="text-white lg:text-white/80">
               <span className="text-moon/50">DAY 4: </span>RUSH HOUR:{" "}
@@ -171,8 +220,8 @@ const Home: NextPage = () => {
               <span className="text-white lg:text-white/80">After-Parties</span>
             </span>
           </div>
-        </div>
-        <div>
+        </motion.div>
+        <div className="mt-32">
           <span className="text-xl lg:text-6xl lg:tracking-widest leading-tight font-black">
             <span className="text-white lg:text-white/80">
               <span className="text-moon/50">
@@ -181,16 +230,22 @@ const Home: NextPage = () => {
             </span>
           </span>
         </div>
-        <div>
-          <span className="text-xs lg:text-md lg:tracking-widest leading-tight font-semibold">
-            <span className="text-white lg:text-white/80">
-              <span className="text-white/80">
-                BE SURE TO HAVE YOUR{" "}
-                <span className="text-moon/50">SSPULSE</span> CARD AT ALL TIMES
-                DURING THE EVENT.
+        <div className="flex flex-col gap-8 justify-start items-start">
+          <div>
+            <span className="text-xs lg:text-md lg:tracking-widest leading-tight font-semibold">
+              <span className="text-white lg:text-white/80">
+                <span className="text-white/80">
+                  BE SURE TO HAVE YOUR{" "}
+                  <span className="text-moon/50">SSPULSE</span> CARD AT ALL
+                  TIMES DURING THE EVENT.
+                </span>
               </span>
             </span>
-          </span>
+          </div>
+          <div className="flex lg:flex-row flex-col items-start justify-start gap-4">
+            <div id="basic" className="lg:w-96 lg:h-64 w-64 h-48"></div>
+            <div id="vip" className="lg:w-96 lg:h-64 w-64 h-48"></div>
+          </div>
         </div>
         <VideoPlayer />
       </div>

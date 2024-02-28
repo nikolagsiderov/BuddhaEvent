@@ -9,6 +9,20 @@
   background-position: center center;
 }
 
+#basic {
+  background-color: #453238;
+  background-image: url("/basic.png");
+  background-size: auto 100%;
+  background-position: center center;
+}
+
+#vip {
+  background-color: #453238;
+  background-image: url("/vip.png");
+  background-size: auto 100%;
+  background-position: center center;
+}
+
 .time {
   font-size: 32px;
 }

@@ -9,8 +9,6 @@ const VideoPlayer = () => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref);
 
-  console.log(isInView);
-
   //video path
   const videosrc = "/teaser.mp4";
 

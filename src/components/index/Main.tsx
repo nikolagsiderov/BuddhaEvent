@@ -2,8 +2,13 @@ import React, { useState, useEffect } from "react";
 import Card from "../utilities/Card";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
+import { PiWarningDiamondFill } from "react-icons/pi";
 
-export default function Hero() {
+interface HeroProps {
+  scrollAction: any;
+}
+
+const Hero: React.FC<HeroProps> = ({ scrollAction }) => {
   const [expiryTime, setExpiryTime] = useState("16 mar 2024 05:00:00");
   const [countdownTime, setCountdownTime] = useState({
     countdownDays: 0,
@@ -103,6 +108,14 @@ export default function Hero() {
               PULSE
             </span>
           </h1>
+          <br />
+          <button
+            onClick={scrollAction}
+            className="lg:bg-white/10 bg-white/20 hover:bg-white/20 lg:text-white/10 text-white/20 font-bold py-2 px-4 rounded-full inline-flex items-center"
+          >
+            <PiWarningDiamondFill size={24} className="lg:fill-white/20 fill-white/30" />
+            <span className="pl-2">DO NOT CLICK</span>
+          </button>
           <div className="lg:flex items-center justify-center lg:my-8 lg:pb-24">
             <motion.div
               initial="hidden"
@@ -194,7 +207,7 @@ export default function Hero() {
               visible: { opacity: 1, y: 0, scale: 1 },
               hidden: { opacity: 0, y: 0, scale: 0.2 },
             }}
-            className="flex items-center justify-center inset-x-0 bottom-5 fixed lg:relative"
+            className="flex items-center justify-center pt-12 lg:pt-0"
           >
             <span className="text-3xl lg:text-9xl lg:tracking-widest leading-tight font-black">
               <span className="text-white lg:text-white/80">
@@ -221,4 +234,6 @@ export default function Hero() {
       </div>
     </>
   );
-}
+};
+
+export default Hero;
